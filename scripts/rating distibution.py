@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load your Zomato data
-zomato_data = pd.read_csv('zomato-data-analysis/Zomato data .csv')
+zomato_data = pd.read_csv('data/Zomato data .csv')
 
 # Clean the ratings
 zomato_data = zomato_data[zomato_data['rate'].str.contains(r'\d', na=False)]
@@ -16,7 +16,8 @@ plt.title('Distribution of Restaurant Ratings')
 plt.xlabel('Rating')
 plt.ylabel('Frequency')
 plt.grid(True, linestyle='--', alpha=0.6)  # Add a grid for better readability
-plt.show()
+plt.savefig('assets/rating_distibution.png', bbox_inches='tight')
+# plt.show()
 
 # 2. Conclusion: Identify the rating range most restaurants fall into (typically 3.5 to 4).
 most_common_range = (zomato_data['rate'].min(), zomato_data['rate'].max()) #initialize a range

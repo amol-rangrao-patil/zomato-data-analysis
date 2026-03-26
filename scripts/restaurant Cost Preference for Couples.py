@@ -2,7 +2,7 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-zomato_data = pd.read_csv('zomato-data-analysis/Zomato data .csv')
+zomato_data = pd.read_csv('data/Zomato data .csv')
 
 
 # 1. Use a count plot to examine approx_cost(for two people).
@@ -14,4 +14,5 @@ plt.xlabel('Approximate Cost (for two people)')
 plt.ylabel('Number of Restaurants')
 plt.xticks(rotation=45, ha='right')  # Rotate x-axis labels for better readability
 plt.tight_layout()
-plt.show()
+plt.savefig('assets/restaurant_cost_preference_for_couples.png', bbox_inches='tight')
+# plt.show()

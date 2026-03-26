@@ -5,7 +5,7 @@ import seaborn as sns
 
 # Display the data
 
-zomato_data=pd.read_csv('zomato-data-analysis/Zomato data .csv')
+zomato_data=pd.read_csv('data/Zomato data .csv')
 
 # 1. Use a count plot to show the distribution of restaurant types.
 plt.figure(figsize=(12, 6))  # Adjust figure size for better readability
@@ -13,7 +13,8 @@ sns.countplot(data=zomato_data, y='listed_in(type)', order=zomato_data['listed_i
 plt.title('Distribution of Restaurant Types')
 plt.xlabel('Number of Restaurants')
 plt.ylabel('Restaurant Type')
-plt.show()
+plt.savefig('assets/type_of_restorant.png', bbox_inches='tight')
+# plt.show()
 
 # 2. Conclusion: Note which type of restaurant is the most common. Dining seems to be preferred.
 most_common_type = zomato_data['listed_in(type)'].value_counts().index[0]

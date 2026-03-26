@@ -3,7 +3,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 
-zomato_data = pd.read_csv('zomato-data-analysis/Zomato data .csv')
+zomato_data = pd.read_csv('data/Zomato data .csv')
 
 
 # 1. Create a pivot table to show the number of restaurants offering online vs. offline orders by type.
@@ -15,7 +15,8 @@ sns.heatmap(pivot_table, annot=True, fmt='d', cmap='YlGnBu')
 plt.title('Online vs. Offline Orders by Restaurant Type')
 plt.xlabel('Online Order')
 plt.ylabel('Restaurant Type')
-plt.show()
+plt.savefig('assets/online_orders_by_restaurant_type.png', bbox_inches='tight')
+# plt.show()
 
 # Conclusion: Note the preference of online orders for cafes and offline orders for dining restaurants.
 print("Conclusion: Observe the heatmap for preferences. Generally, cafes show a preference for online orders, and dining restaurants for offline orders.")

@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 
-zomato_data = pd.read_csv('zomato-data-analysis/Zomato data .csv')
+zomato_data = pd.read_csv('data/Zomato data .csv')
 
 # Clean the ratings
 zomato_data = zomato_data[zomato_data['rate'].str.contains(r'\d', na=False)]
@@ -24,7 +24,8 @@ plt.hist(zomato_data['rate'], bins=20, edgecolor='black')
 plt.title('Distribution of Restaurant Ratings')
 plt.xlabel('Rating')
 plt.ylabel('Frequency')
-plt.show() #show the histogram
+plt.savefig('assets/find_the_insights.png', bbox_inches='tight')
+# plt.show() #show the histogram
 print("\n3. Majority of restaurants have ratings in the range of 3.5 to 4.0 (observe histogram).")
 
 # 4.) Zomato has observed that most couples order most of their food online. What is their average spending on each other?

@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
-zomato_data = pd.read_csv('zomato-data-analysis/Zomato data .csv')
+zomato_data = pd.read_csv('data/Zomato data .csv')
 
 
 # 1. Group the data by listed_in(type) and calculate the sum of votes.
@@ -17,4 +17,5 @@ plt.xlabel('Restaurant Type')
 plt.ylabel('Total Votes')
 plt.xticks(rotation=45, ha='right')  # Rotate x-axis labels for better readability
 plt.tight_layout() # Improves plot layout to prevent labels from being cut off.
-plt.show()
+plt.savefig('assets/vote_by_resto_type.png', bbox_inches='tight')
+# plt.show()

@@ -3,7 +3,7 @@ import numpy as np
 
 # Display the data
 
-zomato_data=pd.read_csv('zomato-data-analysis/Zomato data .csv')
+zomato_data=pd.read_csv('data/Zomato data .csv')
 
 print(zomato_data)      # he is printing the data
 
